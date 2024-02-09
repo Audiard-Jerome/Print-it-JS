@@ -20,12 +20,18 @@ const slides = [
 //init diapo en cours
 let diapoEnCours = 0
 
+//gestion des clics sur les fleches
+
 // query selector sur la fleche gauche
 let arrow_left = document.querySelector("#banner .arrow_left")
 arrow_left.addEventListener("click", () => {
 	console.log("Vous avez cliqué sur la fleche gauche")
 	// On enleve 1 a la variable diapoEnCours
 	diapoEnCours -= 1
+	// Défilement infini. si la diapo en cours est inferieur a 0 on passe la variable a la longueur du diaporama - 1
+	if (diapoEnCours < 0) {
+		diapoEnCours = slides.length - 1
+	}
 	// On affiche le carrousel
 	afficherCarrousel (diapoEnCours)
 	console.log(diapoEnCours)
@@ -35,8 +41,13 @@ arrow_left.addEventListener("click", () => {
 let arrow_right = document.querySelector("#banner .arrow_right")
 arrow_right.addEventListener("click", () => {
 	console.log("Vous avez cliqué sur la fleche droite")
-	diapoEnCours += 1
 	//on ajoute 1 a la variable diapoEnCours
+	diapoEnCours += 1
+	// Défilement infini. Si la diapo en cours est superieur a la longueur du diaporama - 1 on passe la variable a 0
+	if (diapoEnCours > slides.length - 1) {
+		diapoEnCours = 0
+	}
+	// On affiche le carrousel
 	afficherCarrousel (diapoEnCours)
 	console.log(diapoEnCours)
 	});
