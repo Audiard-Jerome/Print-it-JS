@@ -37,7 +37,7 @@ arrow_left.addEventListener("click", () => {
 	// console.log(diapoEnCours)
 	});
 
-// query selector sur la fleche gauche
+// query selector sur la fleche droite
 let arrow_right = document.querySelector("#banner .arrow_right")
 arrow_right.addEventListener("click", () => {
 	// console.log("Vous avez cliqué sur la fleche droite")
