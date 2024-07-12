@@ -1,5 +1,5 @@
-# Print-It WebSite v.1
+# Print-It WebSite
 
-Premiers pas sur le langage JavaScript<br>
-Projet 8 du parcours Développeur WordPress<br>
-Faites vos premiers pas dans le monde du développement web en apprenant à créer des sites WordPress !
+Premiers pas sur le langage JavaScript
+Projet 8 du parcours Développeur WordPress
+Premiers pas sur le langage JavaScript
